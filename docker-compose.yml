@@ -1,0 +1,14 @@
+version: '4'
+
+services:
+
+  db:
+    image: mysql:8
+    container_name: users-service-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - "3326:3306"
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./docker/mysql/data:/var/lib/mysql
