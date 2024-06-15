@@ -1,4 +1,4 @@
-package com.example.rallyce.users.domain.entities;
+package com.example.rallyce.users.domain.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
