@@ -1,0 +1,14 @@
+version: '4'
+
+services:
+
+  db:
+    image: mysql:latest
+    container_name: roomstock-service-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - "3316:3306"
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./docker/mysql/data:/var/lib/mysql
